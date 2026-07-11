@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creaso-Norse Technologies — Custom Software, Websites & Apps</title>
+<meta name="description" content="Creaso-Norse Technologies builds custom software, websites, apps, and business technology solutions. Real Solutions. Real Results.">
+<meta property="og:title" content="Creaso-Norse Technologies">
+<meta property="og:description" content="We build custom software, websites, apps, and business technology solutions. Builders of jcwlunacy.net for Psychopathic Records.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.creaso-norsetech.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0c10;
+  --bg2:#0f1319;
+  --panel:#141a23;
+  --line:#232c3a;
+  --text:#e8edf4;
+  --muted:#93a1b5;
+  --frost:#5fd4ff;
+  --frost-dim:#2a8fb5;
+  --ember:#ffb454;
+  --display:'Chakra Petch',sans-serif;
+  --body:'Space Grotesk',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.6;overflow-x:hidden}
+::selection{background:var(--frost);color:#04222e}
+a{color:var(--frost);text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;letter-spacing:.01em}
+.eyebrow{font-family:var(--display);font-size:.8rem;letter-spacing:.35em;text-transform:uppercase;color:var(--frost);margin-bottom:14px}
+section{padding:110px 0;position:relative}
+.section-title{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:16px}
+.section-sub{color:var(--muted);max-width:620px;font-size:1.05rem;margin-bottom:56px}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,12,16,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--display);font-weight:700;font-size:1.1rem;color:var(--text);display:flex;align-items:center;gap:10px}
+.logo .rune{color:var(--frost);font-size:1.35rem;line-height:1}
+.logo-img{height:40px;width:auto;border-radius:6px}
+.avatar img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+.logo span b{color:var(--frost)}
+.nav-links{display:flex;gap:34px;align-items:center}
+.nav-links a{color:var(--muted);font-size:.92rem;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--frost);color:#04222e !important;padding:9px 20px;border-radius:6px;font-family:var(--display);font-weight:700;font-size:.85rem !important;letter-spacing:.05em;transition:transform .15s,box-shadow .2s}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(95,212,255,.35)}
+.burger{display:none;background:none;border:0;color:var(--text);font-size:1.6rem;cursor:pointer}
+@media(max-width:820px){
+  .nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg2);flex-direction:column;padding:24px;gap:20px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+}
+
+/* ---------- hero ---------- */
+.hero{min-height:100vh;display:flex;align-items:center;padding:140px 0 80px;background:
+  radial-gradient(ellipse 80% 55% at 70% -10%,rgba(95,212,255,.13),transparent),
+  radial-gradient(ellipse 55% 45% at 15% 105%,rgba(255,180,84,.07),transparent),
+  var(--bg)}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(95,212,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(95,212,255,.045) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,black,transparent)}
+.hero .wrap{position:relative;z-index:1}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:99px;padding:7px 18px;font-size:.82rem;color:var(--muted);margin-bottom:28px;background:rgba(20,26,35,.6)}
+.hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--frost);box-shadow:0 0 10px var(--frost);animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:700;margin-bottom:24px;max-width:900px}
+.hero h1 em{font-style:normal;color:var(--frost);text-shadow:0 0 40px rgba(95,212,255,.45)}
+.hero p{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--muted);max-width:640px;margin-bottom:40px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.btn{font-family:var(--display);font-weight:700;letter-spacing:.05em;padding:15px 32px;border-radius:8px;font-size:.95rem;transition:transform .15s,box-shadow .2s;display:inline-block}
+.btn-primary{background:var(--frost);color:#04222e}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 34px rgba(95,212,255,.4)}
+.btn-ghost{border:1px solid var(--line);color:var(--text);background:rgba(20,26,35,.5)}
+.btn-ghost:hover{border-color:var(--frost);transform:translateY(-2px)}
+.hero-stats{display:flex;gap:48px;margin-top:72px;flex-wrap:wrap}
+.stat b{font-family:var(--display);font-size:1.9rem;color:var(--text);display:block}
+.stat span{color:var(--muted);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+.stat b i{color:var(--frost);font-style:normal}
+
+/* ---------- divider ---------- */
+.knot{height:1px;background:linear-gradient(90deg,transparent,var(--frost-dim),transparent);max-width:1140px;margin:0 auto;position:relative}
+.knot::after{content:"ᛟ";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--bg);padding:0 18px;color:var(--frost-dim);font-size:1.1rem}
+
+/* ---------- services ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:34px 28px;transition:transform .2s,border-color .2s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-4px);border-color:var(--frost-dim)}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--frost),transparent);opacity:0;transition:opacity .2s}
+.card:hover::before{opacity:1}
+.card .icon{font-size:1.9rem;margin-bottom:18px;color:var(--frost)}
+.card h3{font-size:1.15rem;margin-bottom:10px}
+.card p{color:var(--muted);font-size:.95rem}
+
+/* ---------- work ---------- */
+#work{background:var(--bg2)}
+.work-feature{background:linear-gradient(135deg,#10151d,#151b26);border:1px solid var(--line);border-radius:16px;padding:48px;display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center;margin-bottom:26px;position:relative;overflow:hidden}
+.work-feature::after{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,rgba(95,212,255,.12),transparent 70%)}
+.badge{display:inline-block;font-family:var(--display);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:5px 14px;border-radius:99px;margin-bottom:18px}
+.badge-live{background:rgba(95,212,255,.12);color:var(--frost);border:1px solid rgba(95,212,255,.35)}
+.badge-dev{background:rgba(255,180,84,.1);color:var(--ember);border:1px solid rgba(255,180,84,.3)}
+.work-feature h3{font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:6px}
+.work-feature .client{color:var(--ember);font-family:var(--display);font-size:.9rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+.work-feature p{color:var(--muted);margin-bottom:14px}
+.feature-points{list-style:none;margin:18px 0 26px}
+.feature-points li{padding:8px 0;color:var(--muted);border-bottom:1px solid var(--line);font-size:.95rem}
+.feature-points li::before{content:"ᚼ ";color:var(--frost);font-weight:700}
+.work-visual{position:relative;z-index:1}
+.browser{background:#0b0e13;border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.browser-bar{display:flex;align-items:center;gap:8px;padding:11px 14px;border-bottom:1px solid var(--line);background:#10151d}
+.browser-bar i{width:10px;height:10px;border-radius:50%;background:#2c3646}
+.browser-bar .url{margin-left:8px;font-size:.75rem;color:var(--muted);background:#0b0e13;border-radius:5px;padding:3px 12px;flex:1}
+.browser-body{padding:26px 22px;font-family:var(--display)}
+.browser-body .mini-title{font-size:1.5rem;font-weight:700;color:#fff}
+.browser-body .mini-title span{color:var(--frost)}
+.browser-body .mini-sub{color:var(--muted);font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;margin:6px 0 18px;font-family:var(--body)}
+.mini-row{display:flex;gap:8px;flex-wrap:wrap}
+.mini-chip{font-size:.68rem;border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:4px 12px;font-family:var(--body)}
+.work-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.work-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:34px 30px;transition:transform .2s,border-color .2s}
+.work-card:hover{transform:translateY(-4px);border-color:var(--frost-dim)}
+.work-card h3{font-size:1.3rem;margin-bottom:4px}
+.work-card .client{color:var(--ember);font-family:var(--display);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.work-card p{color:var(--muted);font-size:.95rem}
+@media(max-width:880px){.work-feature{grid-template-columns:1fr;padding:34px 26px}}
+.coming-soon{margin-top:26px;background:linear-gradient(135deg,#151b26,#10151d);border:1px solid var(--line);border-radius:16px;padding:40px 36px}
+.cs-head{margin-bottom:26px}
+.cs-head h3{font-size:1.5rem;margin-top:4px}
+.cs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.cs-item{border:1px dashed var(--line);border-radius:10px;padding:20px;transition:border-color .2s}
+.cs-item:hover{border-color:var(--ember)}
+.cs-item b{font-family:var(--display);display:block;margin-bottom:6px}
+.cs-item span{color:var(--muted);font-size:.85rem}
+
+/* ---------- team ---------- */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.team-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:38px 30px;text-align:left;transition:transform .2s,border-color .2s}
+.team-card:hover{transform:translateY(-4px);border-color:var(--frost-dim)}
+.avatar{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--frost-dim),#123a4c);display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:700;font-size:1.4rem;color:#dff6ff;margin-bottom:20px}
+.team-card h3{font-size:1.25rem;margin-bottom:4px}
+.team-card .role{color:var(--frost);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;font-family:var(--display);margin-bottom:14px}
+.team-card p{color:var(--muted);font-size:.92rem;margin-bottom:16px}
+.team-card a{font-size:.9rem;word-break:break-all}
+
+/* ---------- contact ---------- */
+#contact{background:
+  radial-gradient(ellipse 60% 50% at 50% 110%,rgba(95,212,255,.1),transparent),var(--bg2)}
+.contact-box{text-align:center;max-width:680px;margin:0 auto}
+.contact-box h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:18px}
+.contact-box p{color:var(--muted);font-size:1.1rem;margin-bottom:40px}
+.contact-emails{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:36px}
+.email-chip{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:14px 24px;font-size:.95rem;color:var(--text);transition:border-color .2s,transform .15s}
+.email-chip:hover{border-color:var(--frost);transform:translateY(-2px)}
+.email-chip span{display:block;font-size:.72rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;font-family:var(--display);margin-bottom:3px}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:44px 0;background:var(--bg)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot .logo{font-size:1rem}
+.foot p{color:var(--muted);font-size:.85rem}
+.foot .tagline{color:var(--frost)}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#top" class="logo"><img class="logo-img" src="https://lh3.googleusercontent.com/sitesv/AA5AbUABjuHV1MaaNctpmJhaTUn_HtpMvq4GPXb68tV10jF3DBWbQrAWQ6cdVZVv0Yp1vh_IdGlpdNn38NTg2qoIOH0WUAMn3IhGULFtTj8AEbzqFVhRxRLZSRZgY2e2iM1ju7IxmXq8M5PHEKjiuRBB1ZSBPvOvUXjINw5i0gpqWxyprtxc_koheEzypXBUyu0=w400" alt="Creaso-Norse Technologies logo"><span>CREASO<b>·</b>NORSE</span></a>
+    <button class="burger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#team">Team</a>
+      <a href="#contact" class="nav-cta">Start a Project</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-tag"><span class="dot"></span> Now building for Psychopathic Records</div>
+    <h1>We forge software that <em>actually ships.</em></h1>
+    <p>Creaso-Norse Technologies builds custom software, websites, apps, and business technology solutions. Real Solutions. Real Results.</p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn btn-primary">Start a Project</a>
+      <a href="#work" class="btn btn-ghost">See Our Work</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b>50<i>+</i></b><span>Products Built</span></div>
+      <div class="stat"><b>iOS <i>·</i> Android <i>·</i> Web</b><span>Every Platform</span></div>
+      <div class="stat"><b>100<i>%</i></b><span>Custom, No Templates</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="knot"></div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="eyebrow reveal">What We Do</div>
+    <h2 class="section-title reveal">Built for battle. Built for business.</h2>
+    <p class="section-sub reveal">From first idea to launch day, we design and build the whole thing in-house.</p>
+    <div class="grid">
+      <div class="card reveal"><div class="icon">⚙</div><h3>Custom Software</h3><p>Purpose-built tools that fit how your business actually works — not the other way around.</p></div>
+      <div class="card reveal"><div class="icon">🌐</div><h3>Websites</h3><p>Fast, bold, custom-coded sites that make your brand impossible to ignore — like jcwlunacy.net.</p></div>
+      <div class="card reveal"><div class="icon">📱</div><h3>Mobile Apps</h3><p>iOS and Android apps taken from concept to the app stores, including AI-powered features.</p></div>
+      <div class="card reveal"><div class="icon">🛡</div><h3>Business Tech Solutions</h3><p>Systems, integrations, and automation that keep your operation running smarter.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="eyebrow reveal">Our Work</div>
+    <h2 class="section-title reveal">Proof, not promises.</h2>
+    <p class="section-sub reveal">Real products, live right now, built end-to-end by Creaso-Norse.</p>
+
+    <div class="work-feature reveal">
+      <div>
+        <span class="badge badge-live">Live · Flagship Build</span>
+        <h3>jcwlunacy.net</h3>
+        <div class="client">For Psychopathic Records · Juggalo Championship Wrestling</div>
+        <p>The official home of JCW Lunacy — a full-scale fan destination we designed and built from scratch.</p>
+        <ul class="feature-points">
+          <li>Browser-based 2D fighting game with online multiplayer</li>
+          <li>Fan "Locker" with points, badges, and match predictions</li>
+          <li>Live event countdowns, full roster of 100+ profiles, episode archive</li>
+          <li>Merch, social, and video integrations across the whole brand</li>
+        </ul>
+        <a href="https://jcwlunacy.net" target="_blank" rel="noopener" class="btn btn-primary">Visit jcwlunacy.net →</a>
+      </div>
+      <div class="work-visual">
+        <div class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i><span class="url">jcwlunacy.net</span></div>
+          <div class="browser-body">
+            <div class="mini-title">JCW <span>LUNACY</span></div>
+            <div class="mini-sub">Juggalo Championship Wrestling</div>
+            <div class="mini-row">
+              <span class="mini-chip">Fighting Game</span>
+              <span class="mini-chip">Fan Locker</span>
+              <span class="mini-chip">Live Events</span>
+              <span class="mini-chip">100+ Roster</span>
+              <span class="mini-chip">Episodes</span>
+              <span class="mini-chip">Merch</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="work-grid">
+      <div class="work-card reveal">
+        <span class="badge badge-live">In-House Product</span>
+        <h3>TCG Referee</h3>
+        <div class="client">Creaso-Norse Original</div>
+        <p>AI-powered rulings for trading card game players, shops, and tournament communities. Ask complex card and battle questions, get fast, clear answers.</p>
+      </div>
+      <div class="work-card reveal">
+        <span class="badge badge-live">In-House Product</span>
+        <h3>Melody's Morels</h3>
+        <div class="client">Creaso-Norse Original · iOS + Android</div>
+        <p>Connects mushroom hunters, guides, and landowners with location-based tools, reporting, and guided hunt resources for the outdoors.</p>
+      </div>
+      <div class="work-card reveal">
+        <span class="badge badge-live">In-House Product</span>
+        <h3>Kash's Adventures</h3>
+        <div class="client">Creaso-Norse Original</div>
+        <p>An adventure game built in-house at Creaso-Norse — part of our growing Adventures series.</p>
+      </div>
+      <div class="work-card reveal">
+        <span class="badge badge-live">In-House Product</span>
+        <h3>Kylie's Adventures</h3>
+        <div class="client">Creaso-Norse Original</div>
+        <p>The second title in the Adventures series — a new world, new challenges, same handcrafted fun.</p>
+      </div>
+      <div class="work-card reveal">
+        <span class="badge badge-live">In-House Product</span>
+        <h3>Flat Earth Slots</h3>
+        <div class="client">Creaso-Norse Original</div>
+        <p>A slots game with a twist — spin your way across the edge of the world in this in-house casino-style game.</p>
+      </div>
+    </div>
+
+    <div class="coming-soon reveal">
+      <div class="cs-head">
+        <span class="badge badge-dev">Coming Soon</span>
+        <h3>On the forge right now</h3>
+      </div>
+      <div class="cs-grid">
+        <div class="cs-item"><b>Kailyn's Adventures</b><span>Next in the Adventures series</span></div>
+        <div class="cs-item"><b>Psychopathic Records Apps</b><span>Multiple apps in development with the legendary Detroit label</span></div>
+        <div class="cs-item"><b>Big Money Rustlas Web Game</b><span>Browser game based on the cult classic</span></div>
+        <div class="cs-item"><b>And More</b><span>New projects announced as they drop</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="knot"></div>
+
+<section id="team">
+  <div class="wrap">
+    <div class="eyebrow reveal">The Team</div>
+    <h2 class="section-title reveal">The builders behind it.</h2>
+    <p class="section-sub reveal">Small crew. Big output. You work directly with the people writing the code.</p>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="avatar">KC</div>
+        <h3>Kirk Creason</h3>
+        <div class="role">Co-Founder</div>
+        <p>Turning real-world problems into working digital products, from wrestling empires to the morel woods.</p>
+        <a href="mailto:kirkcreason@creaso-norsetech.com">kirkcreason@creaso-norsetech.com</a>
+      </div>
+      <div class="team-card reveal">
+        <div class="avatar">BP</div>
+        <h3>Brandon Pein</h3>
+        <div class="role">Co-Founder</div>
+        <p>Building the systems, apps, and experiences that keep Creaso-Norse products fast and battle-tested.</p>
+        <a href="mailto:brandonpein@creaso-norsetech.com">brandonpein@creaso-norsetech.com</a>
+      </div>
+      <div class="team-card reveal">
+        <div class="avatar">AM</div>
+        <h3>Andy Montgomery</h3>
+        <div class="role">Team</div>
+        <p>Part of the crew building Creaso-Norse products from concept to launch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-box">
+    <div class="eyebrow reveal">Contact</div>
+    <h2 class="reveal">Got an idea? Let's build it.</h2>
+    <p class="reveal">Tell us what you need — a website, an app, or something nobody's built yet. We'll tell you exactly how we'd make it real.</p>
+    <a href="mailto:kirkcreason@creaso-norsetech.com?subject=Project%20Inquiry" class="btn btn-primary reveal">Start a Project</a>
+    <div class="contact-emails reveal">
+      <a class="email-chip" href="mailto:kirkcreason@creaso-norsetech.com"><span>Kirk</span>kirkcreason@creaso-norsetech.com</a>
+      <a class="email-chip" href="mailto:brandonpein@creaso-norsetech.com"><span>Brandon</span>brandonpein@creaso-norsetech.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <a href="#top" class="logo"><img class="logo-img" src="https://lh3.googleusercontent.com/sitesv/AA5AbUABjuHV1MaaNctpmJhaTUn_HtpMvq4GPXb68tV10jF3DBWbQrAWQ6cdVZVv0Yp1vh_IdGlpdNn38NTg2qoIOH0WUAMn3IhGULFtTj8AEbzqFVhRxRLZSRZgY2e2iM1ju7IxmXq8M5PHEKjiuRBB1ZSBPvOvUXjINw5i0gpqWxyprtxc_koheEzypXBUyu0=w400" alt="Creaso-Norse Technologies logo"><span>CREASO<b>·</b>NORSE</span></a>
+    <p><span class="tagline">Real Solutions. Real Results.</span> · © 2026 Creaso-Norse Technologies. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.nav-links').classList.remove('open')));
+</script>
+</body>
+</html>
