@@ -46,6 +46,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,12,16,.82
 .logo .rune{color:var(--frost);font-size:1.35rem;line-height:1}
 .logo-img{height:40px;width:auto;border-radius:6px}
 .avatar img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+.team-photo{width:100%;aspect-ratio:1.05/1;object-fit:cover;object-position:top;border-radius:12px;border:1px solid var(--line);margin-bottom:20px}
 .logo span b{color:var(--frost)}
 .nav-links{display:flex;gap:34px;align-items:center}
 .nav-links a{color:var(--muted);font-size:.92rem;font-weight:500;transition:color .2s}
@@ -79,7 +80,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,12,16,.82
 .btn-ghost{border:1px solid var(--line);color:var(--text);background:rgba(20,26,35,.5)}
 .btn-ghost:hover{border-color:var(--frost);transform:translateY(-2px)}
 .hero-stats{display:flex;gap:48px;margin-top:72px;flex-wrap:wrap}
-.hatchet{position:absolute;right:4%;bottom:8%;width:min(30vw,400px);z-index:0;pointer-events:none;animation:floaty 6s ease-in-out infinite;filter:drop-shadow(0 0 16px rgba(255,0,170,.6)) drop-shadow(0 0 44px rgba(57,255,20,.35)) drop-shadow(0 0 90px rgba(255,230,0,.28))}
+.hatchet{position:absolute;right:6%;bottom:10%;width:min(18vw,240px);z-index:0;pointer-events:none;animation:floaty 6s ease-in-out infinite;filter:drop-shadow(0 0 16px rgba(255,0,170,.6)) drop-shadow(0 0 44px rgba(57,255,20,.35)) drop-shadow(0 0 90px rgba(255,230,0,.28))}
 @keyframes floaty{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-16px) rotate(2deg)}}
 @media(max-width:1020px){.hatchet{opacity:.22;right:-8%;bottom:2%;width:62vw}}
 .stat b{font-family:var(--display);font-size:1.9rem;color:var(--text);display:block}
@@ -329,16 +330,16 @@ footer{border-top:1px solid var(--line);padding:44px 0;background:var(--bg)}
     <p class="section-sub reveal">Small crew. Big output. You work directly with the people writing the code.</p>
     <div class="team-grid">
       <div class="team-card reveal">
-        <div class="avatar">KC</div>
+        <img class="team-photo" src="kirk.jpg" alt="Kirk Creason" onerror="this.style.display='none'">
         <h3>Kirk Creason</h3>
-        <div class="role">Co-Founder · 27 Years of Code</div>
+        <div class="role">Co-Founder / Lead Developer · 27 Years of Code</div>
         <p>Kirk has been writing code for 27 years — since before most of today's web existed. In that time he's shipped over 500 products across web, mobile, games, and AI: the official digital home of Juggalo Championship Wrestling, apps now sitting in both app stores for Psychopathic Records, and an in-house catalog spanning card-game AI to outdoor adventure apps. Nearly three decades in, he still writes the code himself — and it shows in everything Creaso-Norse ships.</p>
         <a href="mailto:kirkcreason@creaso-norsetech.com">kirkcreason@creaso-norsetech.com</a>
       </div>
       <div class="team-card reveal">
-        <div class="avatar">BP</div>
+        <img class="team-photo" src="brandon.jpg" alt="Brandon Pein" onerror="this.style.display='none'">
         <h3>Brandon Pein</h3>
-        <div class="role">Co-Founder</div>
+        <div class="role">Co-Founder · 20+ Years of Tech Experience</div>
         <p>Brandon is the other half of the forge — co-founder and the steady hand behind every launch. From client work for Psychopathic Records to the in-house catalog, he keeps Creaso-Norse products fast, stable, and battle-tested, and makes sure what ships keeps working long after launch day.</p>
         <a href="mailto:brandonpein@creaso-norsetech.com">brandonpein@creaso-norsetech.com</a>
       </div>
