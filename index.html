@@ -79,6 +79,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,12,16,.82
 .btn-ghost{border:1px solid var(--line);color:var(--text);background:rgba(20,26,35,.5)}
 .btn-ghost:hover{border-color:var(--frost);transform:translateY(-2px)}
 .hero-stats{display:flex;gap:48px;margin-top:72px;flex-wrap:wrap}
+.hatchet{position:absolute;right:4%;bottom:8%;width:min(30vw,400px);z-index:0;pointer-events:none;animation:floaty 6s ease-in-out infinite;filter:drop-shadow(0 0 16px rgba(255,0,170,.6)) drop-shadow(0 0 44px rgba(57,255,20,.35)) drop-shadow(0 0 90px rgba(255,230,0,.28))}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-16px) rotate(2deg)}}
+@media(max-width:1020px){.hatchet{opacity:.22;right:-8%;bottom:2%;width:62vw}}
 .stat b{font-family:var(--display);font-size:1.9rem;color:var(--text);display:block}
 .stat span{color:var(--muted);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
 .stat b i{color:var(--frost);font-style:normal}
@@ -175,7 +178,7 @@ footer{border-top:1px solid var(--line);padding:44px 0;background:var(--bg)}
 
 <nav>
   <div class="nav-inner">
-    <a href="#top" class="logo"><img class="logo-img" src="https://lh3.googleusercontent.com/sitesv/AA5AbUABjuHV1MaaNctpmJhaTUn_HtpMvq4GPXb68tV10jF3DBWbQrAWQ6cdVZVv0Yp1vh_IdGlpdNn38NTg2qoIOH0WUAMn3IhGULFtTj8AEbzqFVhRxRLZSRZgY2e2iM1ju7IxmXq8M5PHEKjiuRBB1ZSBPvOvUXjINw5i0gpqWxyprtxc_koheEzypXBUyu0=w400" alt="Creaso-Norse Technologies logo"><span>CREASO<b>·</b>NORSE</span></a>
+    <a href="#top" class="logo"><img class="logo-img" src="logo.png" alt="Creaso-Norse Technologies logo" onerror="this.style.display='none'"><span>CREASO<b>·</b>NORSE</span></a>
     <button class="burger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <div class="nav-links">
       <a href="#services">Services</a>
@@ -187,6 +190,7 @@ footer{border-top:1px solid var(--line);padding:44px 0;background:var(--bg)}
 </nav>
 
 <header class="hero" id="top">
+  <img class="hatchet" src="hatchetman.png" alt="" aria-hidden="true" onerror="this.style.display='none'">
   <div class="wrap">
     <div class="hero-tag"><span class="dot"></span> Now building for Psychopathic Records</div>
     <h1>We forge software that <em>actually ships.</em></h1>
@@ -363,7 +367,7 @@ footer{border-top:1px solid var(--line);padding:44px 0;background:var(--bg)}
 
 <footer>
   <div class="wrap foot">
-    <a href="#top" class="logo"><img class="logo-img" src="https://lh3.googleusercontent.com/sitesv/AA5AbUABjuHV1MaaNctpmJhaTUn_HtpMvq4GPXb68tV10jF3DBWbQrAWQ6cdVZVv0Yp1vh_IdGlpdNn38NTg2qoIOH0WUAMn3IhGULFtTj8AEbzqFVhRxRLZSRZgY2e2iM1ju7IxmXq8M5PHEKjiuRBB1ZSBPvOvUXjINw5i0gpqWxyprtxc_koheEzypXBUyu0=w400" alt="Creaso-Norse Technologies logo"><span>CREASO<b>·</b>NORSE</span></a>
+    <a href="#top" class="logo"><img class="logo-img" src="logo.png" alt="Creaso-Norse Technologies logo" onerror="this.style.display='none'"><span>CREASO<b>·</b>NORSE</span></a>
     <p><span class="tagline">Real Solutions. Real Results.</span> · © 2026 Creaso-Norse Technologies. All rights reserved.</p>
   </div>
 </footer>
