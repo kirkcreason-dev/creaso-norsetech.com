@@ -1,236 +1,249 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Creaso-Norse Technologies — our apps and sites</title>
-<meta name="description" content="Creaso-Norse Technologies builds custom software, websites and apps. Get the Psychopathic Records app, JCW Lunacy, jcwlunacy.net and Into the Echoside here.">
-<link rel="canonical" href="https://creaso-norsetech.com/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creaso-Norse Technologies — Our Apps &amp; Sites</title>
+<meta name="description" content="Every Creaso-Norse app and website in one place: the official Psychopathic Records app, JCW Lunacy, jcwlunacy.net and intotheechoside.com.">
+<link rel="canonical" href="https://creaso-norsetech.com/about">
+<meta property="og:title" content="Creaso-Norse Technologies — Our Apps &amp; Sites">
+<meta property="og:description" content="The official Psychopathic Records app, JCW Lunacy, jcwlunacy.net and intotheechoside.com — one link.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Creaso-Norse Technologies — our apps and sites">
-<meta property="og:description" content="The Psychopathic Records app, JCW Lunacy, jcwlunacy.net, Into the Echoside and more — one link.">
-<meta property="og:url" content="https://creaso-norsetech.com/">
-<meta property="og:image" content="https://creaso-norsetech.com/logo.png">
-<meta name="theme-color" content="#15100d">
-<link rel="icon" href="/logo.png">
+<meta property="og:url" content="https://creaso-norsetech.com/about">
+<meta property="og:image" content="https://creaso-norsetech.com/logo-full.png">
+<meta name="theme-color" content="#0a0c10">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Chakra+Petch:wght@600;700&display=swap" rel="stylesheet">
 <style>
-  /* ── Tokens. Change these to retune the whole page. ───────────────── */
-  :root {
-    --iron:  #15100d;   /* page background: soot-warm black */
-    --slag:  #2f2622;   /* hairlines, ghost-button borders */
-    --bone:  #f3ece3;   /* primary text */
-    --smoke: #a89b90;   /* secondary text */
-    --ember: #d93a17;   /* the one accent: store buttons for your phone */
-    --ember-deep: #a82a0f;
-    --display: "Big Shoulders Display", "Arial Narrow", Impact, system-ui, sans-serif;
-    --body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-  }
+/* Shared with index.html — same tokens, type and components. Keep these in step if the home page changes. */
+:root{
+  --bg:#0a0c10;
+  --bg2:#0f1319;
+  --panel:#141a23;
+  --line:#232c3a;
+  --text:#e8edf4;
+  --muted:#93a1b5;
+  --frost:#5fd4ff;
+  --frost-dim:#2a8fb5;
+  --ember:#ffb454;
+  --display:'Chakra Petch',sans-serif;
+  --body:'Space Grotesk',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.6;overflow-x:hidden}
+::selection{background:var(--frost);color:#04222e}
+a{color:var(--frost);text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;letter-spacing:.01em}
+.eyebrow{font-family:var(--display);font-size:.8rem;letter-spacing:.35em;text-transform:uppercase;color:var(--frost);margin-bottom:14px}
+section{padding:72px 0;position:relative}
+.section-title{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:16px}
+.section-sub{color:var(--muted);max-width:620px;font-size:1.05rem;margin-bottom:40px}
 
-  * { box-sizing: border-box; }
-  html { background: var(--iron); color: var(--bone); -webkit-text-size-adjust: 100%; }
-  body {
-    margin: 0;
-    font: 15px/1.45 var(--body);
-    min-height: 100dvh;
-    padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
-  }
-  .wrap { max-width: 520px; margin: 0 auto; padding: 18px 20px 48px; }
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,12,16,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--display);font-weight:700;font-size:1.1rem;color:var(--text);display:flex;align-items:center;gap:10px}
+.logo-img{height:40px;width:auto;border-radius:6px}
+.logo span b{color:var(--frost)}
+.nav-links{display:flex;gap:34px;align-items:center}
+.nav-links a{color:var(--muted);font-size:.92rem;font-weight:500;transition:color .2s}
+.nav-links a:hover,.nav-links a[aria-current]{color:var(--text)}
+.nav-cta{background:var(--frost);color:#04222e !important;padding:9px 20px;border-radius:6px;font-family:var(--display);font-weight:700;font-size:.85rem !important;letter-spacing:.05em;transition:transform .15s,box-shadow .2s}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(95,212,255,.35)}
+.burger{display:none;background:none;border:0;color:var(--text);font-size:1.6rem;cursor:pointer}
+@media(max-width:820px){
+  .nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--bg2);flex-direction:column;padding:24px;gap:20px;border-bottom:1px solid var(--line)}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+}
 
-  /* ── Header ─────────────────────────────────────────────────────── */
-  header { display: flex; align-items: center; justify-content: space-between; padding: 6px 0 30px; }
-  header .about { color: var(--smoke); text-decoration: none; font: 15px/1 var(--body); padding: 6px 0; }
-  header .about:active { color: var(--bone); }
-  header a.brand {
-    display: inline-flex; align-items: center; gap: 10px;
-    color: var(--bone); text-decoration: none;
-    font: 800 20px/1 var(--display); letter-spacing: .06em;
-  }
-  header img { height: 28px; width: auto; }
-  header .dot { color: var(--ember); padding: 0 1px; }
+/* ---------- hero (shorter than the home page's) ---------- */
+.hero{display:flex;align-items:center;padding:130px 0 64px;position:relative;background:
+  radial-gradient(ellipse 80% 55% at 70% -10%,rgba(95,212,255,.13),transparent),
+  radial-gradient(ellipse 55% 45% at 15% 105%,rgba(255,180,84,.07),transparent),
+  var(--bg)}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(95,212,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(95,212,255,.045) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 60% at 50% 40%,black,transparent)}
+.hero .wrap{position:relative;z-index:1}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:99px;padding:7px 18px;font-size:.82rem;color:var(--muted);margin-bottom:28px;background:rgba(20,26,35,.6)}
+.hero-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--frost);box-shadow:0 0 10px var(--frost);animation:pulse 2.2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:700;margin-bottom:24px;max-width:900px}
+.hero h1 em{font-style:normal;color:var(--frost);text-shadow:0 0 40px rgba(95,212,255,.45)}
+.hero p{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--muted);max-width:640px}
+.btn{font-family:var(--display);font-weight:700;letter-spacing:.05em;padding:15px 32px;border-radius:8px;font-size:.95rem;transition:transform .15s,box-shadow .2s;display:inline-block}
+.btn-primary{background:var(--frost);color:#04222e}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 34px rgba(95,212,255,.4)}
+.btn-ghost{border:1px solid var(--line);color:var(--text);background:rgba(20,26,35,.5)}
+.btn-ghost:hover{border-color:var(--frost);transform:translateY(-2px)}
+.hatchet{position:absolute;right:6%;bottom:10%;width:min(18vw,240px);z-index:0;pointer-events:none;animation:floaty 6s ease-in-out infinite;filter:drop-shadow(0 0 16px rgba(255,0,170,.6)) drop-shadow(0 0 44px rgba(57,255,20,.35)) drop-shadow(0 0 90px rgba(255,230,0,.28))}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-16px) rotate(2deg)}}
+@media(max-width:1020px){.hatchet{opacity:.22;right:-8%;bottom:2%;width:62vw}}
 
-  /* ── Greeting ───────────────────────────────────────────────────── */
-  h1 {
-    font: 800 clamp(52px, 17vw, 84px)/.88 var(--display);
-    text-transform: uppercase; letter-spacing: .01em;
-    margin: 0 0 14px;
-  }
-  h1 .device { display: block; color: var(--ember); }
-  .lede { color: var(--smoke); margin: 0 0 30px; max-width: 32ch; }
+/* ---------- divider ---------- */
+.knot{height:1px;background:linear-gradient(90deg,transparent,var(--frost-dim),transparent);max-width:1140px;margin:0 auto;position:relative}
+.knot::after{content:"ᛟ";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--bg);padding:0 18px;color:var(--frost-dim);font-size:1.1rem}
 
-  /* ── Groups ─────────────────────────────────────────────────────── */
-  section { margin: 0 0 30px; }
-  h2 { font: 600 13px/1 var(--body); color: var(--smoke); margin: 0 0 12px; }
-  .primary h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+/* ---------- cards (same as the Our Work cards on the home page) ---------- */
+#sites{background:var(--bg2)}
+.badge{display:inline-block;font-family:var(--display);font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:5px 14px;border-radius:99px;margin-bottom:18px}
+.badge-live{background:rgba(95,212,255,.12);color:var(--frost);border:1px solid rgba(95,212,255,.35)}
+.badge-dev{background:rgba(255,180,84,.1);color:var(--ember);border:1px solid rgba(255,180,84,.3)}
+.work-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.work-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:34px 30px;transition:transform .2s,border-color .2s}
+.work-card:hover{transform:translateY(-4px);border-color:var(--frost-dim)}
+.work-card h3{font-size:1.3rem;margin-bottom:4px}
+.work-card .client{color:var(--ember);font-family:var(--display);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.work-card p{color:var(--muted);font-size:.95rem}
 
-  /* Store buttons: solid ember for the platform you're holding */
-  .btn {
-    display: flex; align-items: center; justify-content: space-between; gap: 14px;
-    background: var(--ember); color: var(--bone); text-decoration: none;
-    padding: 15px 18px; border-radius: 4px; margin: 0 0 10px;
-    -webkit-tap-highlight-color: transparent;
-  }
-  .btn:active { background: var(--ember-deep); }
-  .btn .name { display: block; font: 800 28px/1 var(--display); text-transform: uppercase; letter-spacing: .02em; }
-  .btn .by { display: block; font-size: 13px; opacity: .85; margin-top: 4px; }
-  .btn .store { flex: none; font-size: 13px; opacity: .9; text-align: right; }
+/* ---------- hub-only ---------- */
+.badges{display:flex;gap:8px;flex-wrap:wrap}
+.store-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.store-row .btn{padding:13px 22px;font-size:.88rem}
+.btn-off{border:1px dashed var(--line);color:var(--muted);cursor:default}
+.btn-off:hover{transform:none}
 
-  /* Not in that store yet */
-  .btn.soon { background: transparent; border: 1px dashed var(--slag); color: var(--smoke); }
-  .btn.soon .store { color: var(--ember); opacity: 1; }
-
-  /* The other platform, tucked away */
-  .other h2 { display: none; }
-  .other .btn { background: transparent; border: 1px solid var(--slag); }
-  .other .btn:active { background: var(--slag); }
-  .toggle {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: none; border: 0; padding: 0; margin: 0 0 14px;
-    color: var(--bone); font: 15px/1 var(--body); cursor: pointer;
-  }
-  .toggle::after { content: ""; width: 8px; height: 8px; border: solid var(--smoke); border-width: 0 2px 2px 0; transform: rotate(45deg); margin-top: -4px; }
-  .toggle[aria-expanded="true"]::after { transform: rotate(-135deg); margin-top: 4px; }
-
-  /* Websites: a list, not more buttons */
-  .rows { border-top: 1px solid var(--slag); }
-  .row {
-    display: flex; align-items: center; justify-content: space-between; gap: 14px;
-    padding: 14px 0; border-bottom: 1px solid var(--slag);
-    color: var(--bone); text-decoration: none;
-  }
-  .row .name { display: block; font: 800 24px/1 var(--display); text-transform: uppercase; letter-spacing: .02em; }
-  .row .by { display: block; color: var(--smoke); font-size: 13px; margin-top: 4px; }
-  .row .chev { flex: none; width: 9px; height: 9px; border: solid var(--smoke); border-width: 2px 2px 0 0; transform: rotate(45deg); margin-right: 4px; }
-
-  footer { margin-top: 48px; color: var(--smoke); font-size: 13px; max-width: 44ch; }
-  footer p { margin: 0 0 10px; }
-  footer a { color: var(--bone); }
-
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--bone); outline-offset: 3px; }
-  [hidden] { display: none !important; }
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:44px 0;background:var(--bg)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot .logo{font-size:1rem}
+.foot p{color:var(--muted);font-size:.85rem}
+.foot .tagline{color:var(--frost)}
+.visits{color:var(--muted);font-size:.85rem}
+.visits b{color:var(--ember);font-family:var(--display)}
 </style>
 </head>
 <body>
-<div class="wrap">
 
-  <header>
-    <a class="brand" href="/"><img src="/logo.png" alt="" onerror="this.remove()">CREASO<span class="dot">·</span>NORSE</a>
-    <a class="about" href="/about">About</a>
-  </header>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo"><img class="logo-img" src="logo.png" alt="Creaso-Norse Technologies logo" onerror="this.style.display='none'"><span>CREASO<b>·</b>NORSE</span></a>
+    <button class="burger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <div class="nav-links">
+      <a href="/#services">Services</a>
+      <a href="/#work">Our Work</a>
+      <a href="/#team">Team</a>
+      <a href="/about" aria-current="page">About</a>
+      <a href="/#contact" class="nav-cta">Start a Project</a>
+    </div>
+  </div>
+</nav>
 
-  <h1 id="greet">Everything we build.</h1>
-  <p class="lede" id="lede">Apps, sites and games from Creaso-Norse Technologies, one tap each.</p>
+<header class="hero" id="top">
+  <img class="hatchet" src="hatchetman.png" alt="" aria-hidden="true" decoding="async" fetchpriority="low" onerror="this.style.display='none'">
+  <div class="wrap">
+    <div class="hero-tag"><span class="dot"></span> Official apps &amp; sites · Creaso-Norse Technologies</div>
+    <h1 id="hub-title">Everything we build, <em>one tap away.</em></h1>
+    <p id="hub-sub">The official Psychopathic Records app, JCW Lunacy, and the sites we run for Psychopathic Records — pick yours below.</p>
+  </div>
+</header>
 
-  <main id="main">
+<div class="knot"></div>
 
-    <!-- ── Websites ─────────────────────────────────────────────────── -->
-    <section id="web">
-      <h2>On the web</h2>
-      <div class="rows">
-        <a class="row" href="https://jcwlunacy.net">
-          <span><span class="name">jcwlunacy.net</span><span class="by">JCW Lunacy — episodes, roster, live events, the fan locker and the game</span></span>
-          <span class="chev"></span>
-        </a>
-        <a class="row" href="https://www.intotheechoside.com">
-          <span><span class="name">intotheechoside.com</span><span class="by">Into the Echoside, the Dark Carnival deckbuilding game</span></span>
-          <span class="chev"></span>
-        </a>
+<section id="apps">
+  <div class="wrap">
+    <div class="eyebrow">Apps</div>
+    <h2 class="section-title">Get the apps.</h2>
+    <p class="section-sub" id="apps-sub">Store links open from a computer too — or scan the code with your phone and the right store comes first.</p>
+
+    <div class="work-grid">
+      <div class="work-card">
+        <div class="badges"><span class="badge badge-live">Live · iOS + Android</span></div>
+        <h3>Psychopathic</h3>
+        <div class="client">For Psychopathic Records · Official App</div>
+        <p>News, tour dates, Hatchet Gear, music and the Gathering of the Juggalos — straight from the source, plus the live Family Chat.</p>
+        <div class="store-row">
+          <a class="btn btn-ghost" data-store="ios" href="https://apps.apple.com/us/app/psychopathic/id6798444444">App Store</a>
+          <a class="btn btn-ghost" data-store="android" href="https://play.google.com/store/apps/details?id=com.creasocamps.psychopathicapp">Google Play</a>
+        </div>
       </div>
-    </section>
 
-    <!-- ── iPhone / iPad ────────────────────────────────────────────── -->
-    <!-- To add an app: copy a .btn block and paste its App Store link
-         (looks like https://apps.apple.com/us/app/name/id1234567890).
-         Use class="btn soon" with no href while it's still in review. -->
-    <section id="ios">
-      <h2>For iPhone and iPad</h2>
-
-      <a class="btn" href="https://apps.apple.com/us/app/psychopathic/id6798444444">
-        <span><span class="name">Psychopathic</span><span class="by">Official Psychopathic Records app — news, tour, GOTJ, Family Chat</span></span>
-        <span class="store">App Store</span>
-      </a>
-
-      <div class="btn soon">
-        <span><span class="name">JCW Lunacy</span><span class="by">Juggalo Championship Wrestling, in your pocket</span></span>
-        <span class="store">Coming soon</span>
+      <div class="work-card">
+        <div class="badges"><span class="badge badge-live">Live · Android</span><span class="badge badge-dev">iOS · Coming Soon</span></div>
+        <h3>JCW Lunacy</h3>
+        <div class="client">For Psychopathic Records · JCW</div>
+        <p>Juggalo Championship Wrestling in your pocket — episodes, roster, events and the Lunacy Unlocked game.</p>
+        <div class="store-row">
+          <a class="btn btn-ghost" data-store="android" href="https://play.google.com/store/apps/details?id=com.creasocamps.jcwlunacy">Google Play</a>
+          <span class="btn btn-off" data-store="ios">App Store · coming soon</span>
+        </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- ── Android ──────────────────────────────────────────────────── -->
-    <section id="android">
-      <h2>For Android</h2>
+<div class="knot"></div>
 
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.creasocamps.psychopathicapp">
-        <span><span class="name">Psychopathic</span><span class="by">Official Psychopathic Records app — news, tour, GOTJ, Family Chat</span></span>
-        <span class="store">Google Play</span>
-      </a>
+<section id="sites">
+  <div class="wrap">
+    <div class="eyebrow">Websites</div>
+    <h2 class="section-title">On the web.</h2>
+    <p class="section-sub">Built end-to-end by Creaso-Norse and live right now.</p>
 
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.creasocamps.jcwlunacy">
-        <span><span class="name">JCW Lunacy</span><span class="by">Juggalo Championship Wrestling, in your pocket</span></span>
-        <span class="store">Google Play</span>
-      </a>
-    </section>
+    <div class="work-grid">
+      <div class="work-card">
+        <span class="badge badge-live">Live · Website</span>
+        <h3>jcwlunacy.net</h3>
+        <div class="client">For Psychopathic Records · JCW</div>
+        <p>The official home of JCW Lunacy — episodes, roster, live events, a fan locker, and a browser-based fighting game, built end-to-end.</p>
+        <div class="store-row"><a class="btn btn-primary" href="https://jcwlunacy.net">Visit jcwlunacy.net →</a></div>
+      </div>
+      <div class="work-card">
+        <span class="badge badge-live">Live · Website</span>
+        <h3>intotheechoside.com</h3>
+        <div class="client">For Psychopathic Records · Dark Carnival Games</div>
+        <p>Official home of Into the Echoside — the legendary deckbuilding game's re-release and its new mobile edition, coming to the App Store and Google Play.</p>
+        <div class="store-row"><a class="btn btn-primary" href="https://www.intotheechoside.com">Visit intotheechoside.com →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  </main>
-
-  <footer>
-    <p>Creaso-Norse Technologies builds custom software, websites and apps — everything above included. <a href="/about">Who we are</a>. Have an idea? <a href="mailto:kirkcreason@creaso-norsetech.com?subject=Project%20Inquiry">Start a project</a>.</p>
-    <p>© 2026 Creaso-Norse Technologies · Real Solutions. Real Results.</p>
-  </footer>
-
-</div>
+<footer>
+  <div class="wrap foot">
+    <a href="/" class="logo"><img class="logo-img" src="logo.png" alt="Creaso-Norse Technologies logo" onerror="this.style.display='none'"><span>CREASO<b>·</b>NORSE</span></a>
+    <p><span class="tagline">Real Solutions. Real Results.</span> · © 2026 Creaso-Norse Technologies. All rights reserved.</p>
+    <p class="visits" id="visits" hidden>⚡ <b id="visit-count"></b> visitors and counting</p>
+  </div>
+</footer>
 
 <script>
-(function () {
-  // Add ?p=ios, ?p=android or ?p=web to the URL to preview each version from a computer.
-  var force = new URLSearchParams(location.search).get('p');
-  var ua = navigator.userAgent;
-  var isIPad = /iPad/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  var isIOS = force === 'ios' || (!force && (isIPad || /iPhone|iPod/.test(ua)));
-  var isAndroid = force === 'android' || (!force && /Android/.test(ua));
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.nav-links').classList.remove('open')));
 
-  var main = document.getElementById('main');
-  var greet = document.getElementById('greet');
-  var lede = document.getElementById('lede');
-  var ios = document.getElementById('ios');
-  var android = document.getElementById('android');
-
-  // Any store button still carrying a PASTE_ placeholder is hidden until a real link goes in.
-  Array.prototype.forEach.call(document.querySelectorAll('a.btn'), function (a) {
-    if (/^PASTE_/.test(a.getAttribute('href'))) a.hidden = true;
-  });
-
-  function arrange(mine, theirs, device, theirName) {
-    greet.innerHTML = '<span class="device"></span>spotted.';
-    greet.querySelector('.device').textContent = device;
-    lede.textContent = 'Everything we build, one tap each.';
-
-    mine.classList.add('primary');
-    main.insertBefore(mine, main.firstChild);
-
-    theirs.classList.add('other');
-    theirs.hidden = true;
-    var toggle = document.createElement('button');
-    toggle.className = 'toggle';
-    toggle.type = 'button';
-    toggle.textContent = 'Also on ' + theirName;
-    toggle.setAttribute('aria-expanded', 'false');
-    toggle.setAttribute('aria-controls', theirs.id);
-    toggle.addEventListener('click', function () {
-      var open = theirs.hidden;
-      theirs.hidden = !open;
-      toggle.setAttribute('aria-expanded', String(open));
+// Put the visitor's own store first. Add ?p=ios, ?p=android or ?p=web to preview each version from a computer.
+(function(){
+  const force=new URLSearchParams(location.search).get('p');
+  const ua=navigator.userAgent;
+  const iPad=/iPad/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  const ios=force==='ios'||(!force&&(iPad||/iPhone|iPod/.test(ua)));
+  const android=force==='android'||(!force&&/Android/.test(ua));
+  const mine=ios?'ios':android?'android':null;
+  if(!mine)return;
+  const device=ios?(iPad?'iPad':'iPhone'):'Android';
+  document.getElementById('hub-title').innerHTML=device+' spotted. <em>Here\u2019s everything.</em>';
+  document.getElementById('hub-sub').textContent='Everything we build, one tap each \u2014 '+(ios?'App Store':'Google Play')+' links first.';
+  document.getElementById('apps-sub').textContent=ios
+    ?'App Store links come first for your '+device+'. Google Play is right there too.'
+    :'Google Play links come first for your Android. The App Store links are right there too.';
+  document.querySelectorAll('.store-row').forEach(row=>{
+    row.querySelectorAll('[data-store]').forEach(b=>{
+      if(b.classList.contains('btn-off'))return;
+      const match=b.dataset.store===mine;
+      b.classList.toggle('btn-primary',match);
+      b.classList.toggle('btn-ghost',!match);
+      if(match)row.prepend(b);
     });
-    main.appendChild(toggle);
-    main.appendChild(theirs);
-  }
-
-  if (isIOS) arrange(ios, android, isIPad ? 'iPad' : 'iPhone', 'Android');
-  else if (isAndroid) arrange(android, ios, 'Android', 'iPhone');
-  else lede.textContent = 'Apps, sites and games from Creaso-Norse Technologies, one tap each. Store links work from a computer too.';
+  });
 })();
+
+// Same counter service as the home page, separate key so hub visits (QR scans) count on their own.
+fetch('https://abacus.jasoncameron.dev/hit/creaso-norsetech.com/hub-visits')
+  .then(r=>r.json())
+  .then(d=>{if(d.value){document.getElementById('visit-count').textContent=Number(d.value).toLocaleString();document.getElementById('visits').hidden=false}})
+  .catch(()=>{});
 </script>
 </body>
 </html>
