@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Creaso-Norse — every app and site, one tap</title>
+<meta name="description" content="Every Creaso-Norse app and website in one place: the Psychopathic Records app, JCW Lunacy, jcwlunacy.net, Into the Echoside and more.">
+<link rel="canonical" href="https://creaso-norsetech.com/go/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Creaso-Norse — every app and site, one tap">
+<meta property="og:description" content="The Psychopathic Records app, JCW Lunacy, jcwlunacy.net, Into the Echoside and more — one link.">
+<meta property="og:url" content="https://creaso-norsetech.com/go/">
+<meta property="og:image" content="https://creaso-norsetech.com/logo.png">
+<meta name="theme-color" content="#15100d">
+<link rel="icon" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&display=swap" rel="stylesheet">
+<style>
+  /* ── Tokens. Change these to retune the whole page. ───────────────── */
+  :root {
+    --iron:  #15100d;   /* page background: soot-warm black */
+    --slag:  #2f2622;   /* hairlines, ghost-button borders */
+    --bone:  #f3ece3;   /* primary text */
+    --smoke: #a89b90;   /* secondary text */
+    --ember: #d93a17;   /* the one accent: store buttons for your phone */
+    --ember-deep: #a82a0f;
+    --display: "Big Shoulders Display", "Arial Narrow", Impact, system-ui, sans-serif;
+    --body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { background: var(--iron); color: var(--bone); -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font: 15px/1.45 var(--body);
+    min-height: 100dvh;
+    padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+  }
+  .wrap { max-width: 520px; margin: 0 auto; padding: 18px 20px 48px; }
+
+  /* ── Header ─────────────────────────────────────────────────────── */
+  header { padding: 6px 0 30px; }
+  header a {
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--bone); text-decoration: none;
+    font: 800 20px/1 var(--display); letter-spacing: .06em;
+  }
+  header img { height: 28px; width: auto; }
+  header .dot { color: var(--ember); padding: 0 1px; }
+
+  /* ── Greeting ───────────────────────────────────────────────────── */
+  h1 {
+    font: 800 clamp(52px, 17vw, 84px)/.88 var(--display);
+    text-transform: uppercase; letter-spacing: .01em;
+    margin: 0 0 14px;
+  }
+  h1 .device { display: block; color: var(--ember); }
+  .lede { color: var(--smoke); margin: 0 0 30px; max-width: 32ch; }
+
+  /* ── Groups ─────────────────────────────────────────────────────── */
+  section { margin: 0 0 30px; }
+  h2 { font: 600 13px/1 var(--body); color: var(--smoke); margin: 0 0 12px; }
+  .primary h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+  /* Store buttons: solid ember for the platform you're holding */
+  .btn {
+    display: flex; align-items: center; justify-content: space-between; gap: 14px;
+    background: var(--ember); color: var(--bone); text-decoration: none;
+    padding: 15px 18px; border-radius: 4px; margin: 0 0 10px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn:active { background: var(--ember-deep); }
+  .btn .name { display: block; font: 800 28px/1 var(--display); text-transform: uppercase; letter-spacing: .02em; }
+  .btn .by { display: block; font-size: 13px; opacity: .85; margin-top: 4px; }
+  .btn .store { flex: none; font-size: 13px; opacity: .9; text-align: right; }
+
+  /* Not in that store yet */
+  .btn.soon { background: transparent; border: 1px dashed var(--slag); color: var(--smoke); }
+  .btn.soon .store { color: var(--ember); opacity: 1; }
+
+  /* The other platform, tucked away */
+  .other h2 { display: none; }
+  .other .btn { background: transparent; border: 1px solid var(--slag); }
+  .other .btn:active { background: var(--slag); }
+  .toggle {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: none; border: 0; padding: 0; margin: 0 0 14px;
+    color: var(--bone); font: 15px/1 var(--body); cursor: pointer;
+  }
+  .toggle::after { content: ""; width: 8px; height: 8px; border: solid var(--smoke); border-width: 0 2px 2px 0; transform: rotate(45deg); margin-top: -4px; }
+  .toggle[aria-expanded="true"]::after { transform: rotate(-135deg); margin-top: 4px; }
+
+  /* Websites: a list, not more buttons */
+  .rows { border-top: 1px solid var(--slag); }
+  .row {
+    display: flex; align-items: center; justify-content: space-between; gap: 14px;
+    padding: 14px 0; border-bottom: 1px solid var(--slag);
+    color: var(--bone); text-decoration: none;
+  }
+  .row .name { display: block; font: 800 24px/1 var(--display); text-transform: uppercase; letter-spacing: .02em; }
+  .row .by { display: block; color: var(--smoke); font-size: 13px; margin-top: 4px; }
+  .row .chev { flex: none; width: 9px; height: 9px; border: solid var(--smoke); border-width: 2px 2px 0 0; transform: rotate(45deg); margin-right: 4px; }
+
+  footer { margin-top: 48px; color: var(--smoke); font-size: 12px; }
+  footer a { color: var(--smoke); }
+
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--bone); outline-offset: 3px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <a href="/"><img src="/logo.png" alt="">CREASO<span class="dot">·</span>NORSE</a>
+  </header>
+
+  <h1 id="greet">Here's everything.</h1>
+  <p class="lede" id="lede">Every Creaso-Norse app and site, one tap each.</p>
+
+  <main id="main">
+
+    <!-- ── Websites ─────────────────────────────────────────────────── -->
+    <section id="web">
+      <h2>On the web</h2>
+      <div class="rows">
+        <a class="row" href="https://jcwlunacy.net">
+          <span><span class="name">jcwlunacy.net</span><span class="by">JCW Lunacy — episodes, roster, live events, the fan locker and the game</span></span>
+          <span class="chev"></span>
+        </a>
+        <a class="row" href="https://www.intotheechoside.com">
+          <span><span class="name">intotheechoside.com</span><span class="by">Into the Echoside, the Dark Carnival deckbuilding game</span></span>
+          <span class="chev"></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── iPhone / iPad ────────────────────────────────────────────── -->
+    <!-- To add an app: copy a .btn block and paste its App Store link
+         (looks like https://apps.apple.com/us/app/name/id1234567890).
+         Use class="btn soon" with no href while it's still in review. -->
+    <section id="ios">
+      <h2>For iPhone and iPad</h2>
+
+      <a class="btn" href="https://apps.apple.com/us/app/psychopathic/id6798444444">
+        <span><span class="name">Psychopathic</span><span class="by">Official Psychopathic Records app — news, tour, GOTJ, Family Chat</span></span>
+        <span class="store">App Store</span>
+      </a>
+
+      <div class="btn soon">
+        <span><span class="name">JCW Lunacy</span><span class="by">Juggalo Championship Wrestling, in your pocket</span></span>
+        <span class="store">Coming soon</span>
+      </div>
+    </section>
+
+    <!-- ── Android ──────────────────────────────────────────────────── -->
+    <section id="android">
+      <h2>For Android</h2>
+
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.creasocamps.psychopathicapp">
+        <span><span class="name">Psychopathic</span><span class="by">Official Psychopathic Records app — news, tour, GOTJ, Family Chat</span></span>
+        <span class="store">Google Play</span>
+      </a>
+
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.creasocamps.jcwlunacy">
+        <span><span class="name">JCW Lunacy</span><span class="by">Juggalo Championship Wrestling, in your pocket</span></span>
+        <span class="store">Google Play</span>
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Creaso-Norse Technologies · <a href="mailto:kirkcreason@creaso-norsetech.com?subject=Project%20Inquiry">Start a project</a>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  // Add ?p=ios, ?p=android or ?p=web to the URL to preview each version from a computer.
+  var force = new URLSearchParams(location.search).get('p');
+  var ua = navigator.userAgent;
+  var isIPad = /iPad/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var isIOS = force === 'ios' || (!force && (isIPad || /iPhone|iPod/.test(ua)));
+  var isAndroid = force === 'android' || (!force && /Android/.test(ua));
+
+  var main = document.getElementById('main');
+  var greet = document.getElementById('greet');
+  var lede = document.getElementById('lede');
+  var ios = document.getElementById('ios');
+  var android = document.getElementById('android');
+
+  // Any store button still carrying a PASTE_ placeholder is hidden until a real link goes in.
+  Array.prototype.forEach.call(document.querySelectorAll('a.btn'), function (a) {
+    if (/^PASTE_/.test(a.getAttribute('href'))) a.hidden = true;
+  });
+
+  function arrange(mine, theirs, device, theirName) {
+    greet.innerHTML = '<span class="device"></span>spotted.';
+    greet.querySelector('.device').textContent = device;
+    lede.textContent = 'Everything we build, one tap each.';
+
+    mine.classList.add('primary');
+    main.insertBefore(mine, main.firstChild);
+
+    theirs.classList.add('other');
+    theirs.hidden = true;
+    var toggle = document.createElement('button');
+    toggle.className = 'toggle';
+    toggle.type = 'button';
+    toggle.textContent = 'Also on ' + theirName;
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-controls', theirs.id);
+    toggle.addEventListener('click', function () {
+      var open = theirs.hidden;
+      theirs.hidden = !open;
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    main.appendChild(toggle);
+    main.appendChild(theirs);
+  }
+
+  if (isIOS) arrange(ios, android, isIPad ? 'iPad' : 'iPhone', 'Android');
+  else if (isAndroid) arrange(android, ios, 'Android', 'iPhone');
+  else lede.textContent = 'Store links open from a computer too — or scan the code again with your phone.';
+})();
+</script>
+</body>
+</html>
