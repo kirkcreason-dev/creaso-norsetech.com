@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Creaso-Norse — every app and site, one tap</title>
-<meta name="description" content="Every Creaso-Norse app and website in one place: the Psychopathic Records app, JCW Lunacy, jcwlunacy.net, Into the Echoside and more.">
-<link rel="canonical" href="https://creaso-norsetech.com/go/">
+<title>Creaso-Norse Technologies — our apps and sites</title>
+<meta name="description" content="Creaso-Norse Technologies builds custom software, websites and apps. Get the Psychopathic Records app, JCW Lunacy, jcwlunacy.net and Into the Echoside here.">
+<link rel="canonical" href="https://creaso-norsetech.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Creaso-Norse — every app and site, one tap">
+<meta property="og:title" content="Creaso-Norse Technologies — our apps and sites">
 <meta property="og:description" content="The Psychopathic Records app, JCW Lunacy, jcwlunacy.net, Into the Echoside and more — one link.">
-<meta property="og:url" content="https://creaso-norsetech.com/go/">
+<meta property="og:url" content="https://creaso-norsetech.com/">
 <meta property="og:image" content="https://creaso-norsetech.com/logo.png">
 <meta name="theme-color" content="#15100d">
 <link rel="icon" href="/logo.png">
@@ -40,8 +40,10 @@
   .wrap { max-width: 520px; margin: 0 auto; padding: 18px 20px 48px; }
 
   /* ── Header ─────────────────────────────────────────────────────── */
-  header { padding: 6px 0 30px; }
-  header a {
+  header { display: flex; align-items: center; justify-content: space-between; padding: 6px 0 30px; }
+  header .about { color: var(--smoke); text-decoration: none; font: 15px/1 var(--body); padding: 6px 0; }
+  header .about:active { color: var(--bone); }
+  header a.brand {
     display: inline-flex; align-items: center; gap: 10px;
     color: var(--bone); text-decoration: none;
     font: 800 20px/1 var(--display); letter-spacing: .06em;
@@ -102,8 +104,9 @@
   .row .by { display: block; color: var(--smoke); font-size: 13px; margin-top: 4px; }
   .row .chev { flex: none; width: 9px; height: 9px; border: solid var(--smoke); border-width: 2px 2px 0 0; transform: rotate(45deg); margin-right: 4px; }
 
-  footer { margin-top: 48px; color: var(--smoke); font-size: 12px; }
-  footer a { color: var(--smoke); }
+  footer { margin-top: 48px; color: var(--smoke); font-size: 13px; max-width: 44ch; }
+  footer p { margin: 0 0 10px; }
+  footer a { color: var(--bone); }
 
   a:focus-visible, button:focus-visible { outline: 2px solid var(--bone); outline-offset: 3px; }
   [hidden] { display: none !important; }
@@ -113,11 +116,12 @@
 <div class="wrap">
 
   <header>
-    <a href="/"><img src="/logo.png" alt="">CREASO<span class="dot">·</span>NORSE</a>
+    <a class="brand" href="/"><img src="/logo.png" alt="" onerror="this.remove()">CREASO<span class="dot">·</span>NORSE</a>
+    <a class="about" href="/about">About</a>
   </header>
 
-  <h1 id="greet">Here's everything.</h1>
-  <p class="lede" id="lede">Every Creaso-Norse app and site, one tap each.</p>
+  <h1 id="greet">Everything we build.</h1>
+  <p class="lede" id="lede">Apps, sites and games from Creaso-Norse Technologies, one tap each.</p>
 
   <main id="main">
 
@@ -172,7 +176,8 @@
   </main>
 
   <footer>
-    © 2026 Creaso-Norse Technologies · <a href="mailto:kirkcreason@creaso-norsetech.com?subject=Project%20Inquiry">Start a project</a>
+    <p>Creaso-Norse Technologies builds custom software, websites and apps — everything above included. <a href="/about">Who we are</a>. Have an idea? <a href="mailto:kirkcreason@creaso-norsetech.com?subject=Project%20Inquiry">Start a project</a>.</p>
+    <p>© 2026 Creaso-Norse Technologies · Real Solutions. Real Results.</p>
   </footer>
 
 </div>
@@ -224,7 +229,7 @@
 
   if (isIOS) arrange(ios, android, isIPad ? 'iPad' : 'iPhone', 'Android');
   else if (isAndroid) arrange(android, ios, 'Android', 'iPhone');
-  else lede.textContent = 'Store links open from a computer too — or scan the code again with your phone.';
+  else lede.textContent = 'Apps, sites and games from Creaso-Norse Technologies, one tap each. Store links work from a computer too.';
 })();
 </script>
 </body>
