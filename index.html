@@ -87,6 +87,37 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,12,16,.82
 .stat span{color:var(--muted);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
 .stat b i{color:var(--frost);font-style:normal}
 
+/* ---------- console game feature ---------- */
+.console{padding:0;background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.console::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(ellipse 60% 70% at 88% 20%,rgba(255,180,84,.16),transparent),
+  radial-gradient(ellipse 55% 55% at 8% 95%,rgba(95,212,255,.13),transparent)}
+.console::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(95,212,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(95,212,255,.035) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 60% 70% at 70% 50%,black,transparent)}
+.console .wrap{position:relative;z-index:1;padding-top:110px;padding-bottom:110px}
+.console-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.console-top .eyebrow{margin:0}
+.platforms{display:flex;gap:10px;flex-wrap:wrap}
+.platform{font-family:var(--display);font-weight:700;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;padding:9px 18px;border-radius:99px;border:1px solid rgba(95,212,255,.35);background:rgba(20,26,35,.75);color:var(--text)}
+.console-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.console-title{font-size:clamp(3rem,8vw,6.4rem);line-height:.95;margin-bottom:14px}
+.console-title em{font-style:normal;color:var(--ember);text-shadow:0 0 40px rgba(255,180,84,.45)}
+.console-sub{color:var(--ember);font-family:var(--display);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px}
+.console-lede{color:var(--muted);font-size:1.15rem;max-width:560px;margin-bottom:28px}
+.console-feats{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 32px}
+.console-feats li{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.console-feats b{display:block;font-family:var(--display);font-size:.95rem;color:var(--frost);margin-bottom:3px}
+.console-feats span{color:var(--muted);font-size:.9rem}
+.console-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.console-status{color:var(--muted);font-size:.9rem}
+.console-status b{color:var(--text);font-weight:500}
+.console-art{position:relative;aspect-ratio:16/10;border-radius:16px;border:1px solid var(--line);overflow:hidden;background:linear-gradient(135deg,#0f1319,#141a23 60%,#10202c);box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.console-art img{width:100%;height:100%;object-fit:cover;display:block}
+.console-art-fallback{display:none;position:absolute;inset:0;place-items:center;text-align:center;font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,3.2vw,2.6rem);letter-spacing:.28em;color:var(--frost);text-shadow:0 0 40px rgba(95,212,255,.45);line-height:1.6}
+.console-art-fallback small{display:block;font-family:var(--display);font-size:.78rem;letter-spacing:.2em;color:var(--muted);text-shadow:none}
+.console-art.empty img{display:none}
+.console-art.empty .console-art-fallback{display:grid}
+@media(max-width:900px){.console-grid{grid-template-columns:1fr;gap:36px}.console-feats{grid-template-columns:1fr}.console .wrap{padding-top:80px;padding-bottom:80px}}
+
 /* ---------- divider ---------- */
 .knot{height:1px;background:linear-gradient(90deg,transparent,var(--frost-dim),transparent);max-width:1140px;margin:0 auto;position:relative}
 .knot::after{content:"ᛟ";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:var(--bg);padding:0 18px;color:var(--frost-dim);font-size:1.1rem}
@@ -184,6 +215,7 @@ footer{border-top:1px solid var(--line);padding:44px 0;background:var(--bg)}
     <a href="#top" class="logo"><img class="logo-img" src="logo.png" alt="Creaso-Norse Technologies logo" onerror="this.style.display='none'"><span>CREASO<b>·</b>NORSE</span></a>
     <button class="burger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <div class="nav-links">
+      <a href="#console">Console Game</a>
       <a href="#services">Services</a>
       <a href="#work">Our Work</a>
       <a href="#team">Team</a>
@@ -210,6 +242,39 @@ footer{border-top:1px solid var(--line);padding:44px 0;background:var(--bg)}
     </div>
   </div>
 </header>
+
+<!-- ═══════ CONSOLE GAME ═══════
+     Teaser only for now. To show key art, drop console-keyart.jpg in the repo root
+     (16:10 or 16:9, at least 1600px wide) — the frame swaps to it automatically. -->
+<section id="console" class="console">
+  <div class="wrap">
+    <div class="console-top">
+      <div class="eyebrow">Psychopathic Records · Console Game</div>
+      <div class="platforms"><span class="platform">Xbox Series X|S</span><span class="platform">PlayStation 5</span></div>
+    </div>
+    <div class="console-grid">
+      <div class="console-copy reveal">
+        <h2 class="console-title">Open world. 4K.<br><em>Coming soon.</em></h2>
+        <div class="console-sub">A Psychopathic Records game · Built by Creaso-Norse</div>
+        <p class="console-lede">A full open-world Psychopathic Records game, built for Xbox Series X|S and PlayStation 5 in 4K. Details are under wraps for now — the Family will be the first to know.</p>
+        <ul class="console-feats">
+          <li><b>Open World</b><span>A fully open world to explore, your way.</span></li>
+          <li><b>4K</b><span>Built for current-gen consoles, in 4K.</span></li>
+          <li><b>Xbox Series X|S &amp; PS5</b><span>Coming to both.</span></li>
+          <li><b>Coming Soon</b><span>Title, trailer and release window on the way.</span></li>
+        </ul>
+        <div class="console-cta">
+          <a class="btn btn-primary" href="/about">Get Updates in the Psychopathic App</a>
+        </div>
+        <p class="console-status"><b>Status:</b> In development &nbsp;·&nbsp; <b>Release:</b> TBA</p>
+      </div>
+      <div class="console-art reveal">
+        <img src="console-keyart.jpg" alt="Psychopathic Records console game" onerror="this.parentNode.classList.add('empty')">
+        <div class="console-art-fallback">COMING SOON<small>Xbox Series X|S &nbsp;·&nbsp; PlayStation 5 &nbsp;·&nbsp; 4K</small></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <div class="knot"></div>
 
