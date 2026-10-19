@@ -220,7 +220,13 @@ nav.solid{background:rgba(5,7,11,.86);backdrop-filter:blur(14px);border-color:va
 .console-art.empty .console-art-fallback{display:grid}
 .console-art.empty::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 2px,transparent 2px 5px);animation:scan 6s linear infinite}
 @keyframes scan{to{background-position:0 200px}}
-@media(max-width:900px){.console-grid{grid-template-columns:1fr}.console-feats{grid-template-columns:1fr}.console{padding:110px 0}}
+.console-second{margin-top:110px;padding-top:80px;border-top:1px solid rgba(255,255,255,.08)}
+.console-second .console-title em{color:var(--frost);text-shadow:0 0 50px rgba(95,212,255,.55)}
+.console-second .console-feats li{border-left-color:var(--frost)}
+.console-art.jcw{background:linear-gradient(135deg,#06182a,#0b0f17 60%,#1a0d08)}
+.console-art.jcw .console-art-fallback{text-shadow:0 0 40px rgba(95,212,255,.7)}
+.console-art.jcw .console-art-fallback small{color:var(--frost)}
+@media(max-width:900px){.console-second{margin-top:70px;padding-top:60px}.console-grid{grid-template-columns:1fr}.console-feats{grid-template-columns:1fr}.console{padding:110px 0}}
 
 /* ---------- team ---------- */
 #team{background:var(--bg);overflow:hidden}
@@ -457,6 +463,31 @@ footer{border-top:1px solid var(--line);padding:46px 0;background:var(--void)}
       <div class="console-art reveal">
         <img src="console-keyart.jpg" alt="Psychopathic Records console game" onerror="this.parentNode.classList.add('empty')">
         <div class="console-art-fallback">COMING SOON<small>Xbox Series X|S &nbsp;·&nbsp; PlayStation 5 &nbsp;·&nbsp; 4K</small></div>
+      </div>
+    </div>
+
+    <!-- JCW Lunacy for Xbox. Key art: drop jcw-xbox-keyart.jpg in the repo root and the frame swaps to it. -->
+    <div class="console-second">
+      <div class="console-top">
+        <div class="kicker">JCW Lunacy · Console Game</div>
+        <div class="platforms"><span class="platform">Xbox</span></div>
+      </div>
+      <div class="console-grid">
+        <div class="console-art jcw reveal">
+          <img src="jcw-xbox-keyart.jpg" alt="JCW Lunacy for Xbox" onerror="this.parentNode.classList.add('empty')">
+          <div class="console-art-fallback">COMING SOON<small>JCW Lunacy &nbsp;·&nbsp; Xbox</small></div>
+        </div>
+        <div class="reveal">
+          <h2 class="console-title">JCW Lunacy.<br><em>Coming to Xbox.</em></h2>
+          <div class="console-sub">Juggalo Championship Wrestling · Built by Creaso-Norse</div>
+          <p class="console-lede">Juggalo Championship Wrestling is heading to Xbox. Details are under wraps for now — the Lunatics will be the first to know.</p>
+          <ul class="console-feats">
+            <li><b>JCW Lunacy</b><span>Juggalo Championship Wrestling, on console.</span></li>
+            <li><b>Xbox</b><span>In development for Xbox.</span></li>
+          </ul>
+          <div class="console-cta"><a class="btn btn-primary" href="https://jcwlunacy.net" target="_blank" rel="noopener">Follow on jcwlunacy.net</a></div>
+          <p class="console-status"><b>Status:</b> In development &nbsp;·&nbsp; <b>Release:</b> TBA</p>
+        </div>
       </div>
     </div>
   </div>
