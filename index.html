@@ -154,6 +154,7 @@ nav.solid{background:rgba(5,7,11,.86);backdrop-filter:blur(14px);border-color:va
 .card-label::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--line),transparent)}
 .card-label small{font-family:var(--display);font-size:.78rem;letter-spacing:.24em;color:var(--ember);padding:6px 12px;border:1px solid rgba(255,180,84,.4)}
 .main-event{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.main-event>.mcard:last-child:nth-child(odd){grid-column:1/-1}
 .mcard{position:relative;padding:44px 40px 40px;background:linear-gradient(150deg,#121a26,#0c1018 70%);clip-path:var(--cut);overflow:hidden;transition:transform .3s}
 .mcard::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--mx,80%) var(--my,0%),rgba(95,212,255,.22),transparent 45%);transition:opacity .3s}
 .mcard::after{content:attr(data-big);position:absolute;right:-6px;bottom:-34px;font-family:var(--poster);font-size:9rem;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.06);text-transform:uppercase;pointer-events:none}
@@ -371,6 +372,13 @@ footer{border-top:1px solid var(--line);padding:46px 0;background:var(--void)}
         <p>Official home of Into the Echoside — the legendary deckbuilding game's re-release and its new mobile edition, coming to the App Store and Google Play.</p>
         <div class="links"><a href="https://www.intotheechoside.com" target="_blank" rel="noopener">Visit intotheechoside.com →</a></div>
       </div>
+      <div class="mcard reveal" data-big="BMR">
+        <span class="badge badge-live">Live · Web Game</span>
+        <h3>Big Money Rustlas</h3>
+        <div class="client">Browser game · JCW Lunacy</div>
+        <p>A browser game based on the cult classic — playing now on jcwlunacy.net for Lunatics Only members, and in the JCW Lunacy app.</p>
+        <div class="links"><a href="https://jcwlunacy.net" target="_blank" rel="noopener">Play on jcwlunacy.net →</a></div>
+      </div>
     </div>
 
     <h3 class="card-label reveal">In-house products <small>Creaso-Norse originals</small></h3>
@@ -417,7 +425,6 @@ footer{border-top:1px solid var(--line);padding:46px 0;background:var(--void)}
         <div class="cs-item"><b>JCW Lunacy for Xbox</b><span>A JCW Lunacy wrestling game for Xbox — in development</span></div>
         <div class="cs-item"><b>JCW Lunacy for iPhone</b><span>Android is live now — the App Store version is next</span></div>
         <div class="cs-item"><b>Kailyn's Adventures</b><span>Next in the Adventures series</span></div>
-        <div class="cs-item"><b>Big Money Rustlas Web Game</b><span>Browser game based on the cult classic</span></div>
         <div class="cs-item"><b>And More</b><span>New projects announced as they drop</span></div>
       </div>
     </div>
