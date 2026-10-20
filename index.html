@@ -146,6 +146,18 @@ nav.solid{background:rgba(5,7,11,.86);backdrop-filter:blur(14px);border-color:va
 .svc h3{font-family:var(--poster);font-weight:400;font-size:1.7rem;text-transform:uppercase;letter-spacing:.02em;line-height:1.05;margin-bottom:12px;position:relative}
 .svc p{color:var(--muted);font-size:.96rem;position:relative}
 @media(max-width:1000px){.svc-grid{grid-template-columns:1fr 1fr}}
+.schools{position:relative;margin-top:90px;padding:56px 52px;clip-path:var(--cut);background:radial-gradient(ellipse 60% 90% at 100% 0,rgba(255,90,31,.22),transparent 65%),linear-gradient(135deg,#131a26,#0b0f17)}
+.schools::before{content:"";position:absolute;inset:0;border-left:4px solid var(--blaze);pointer-events:none}
+.schools-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.schools h3{font-family:var(--poster);font-weight:400;text-transform:uppercase;font-size:clamp(2.4rem,5vw,4.2rem);line-height:.92;margin-bottom:22px}
+.schools h3 em{font-style:normal;color:var(--ember);text-shadow:0 0 40px rgba(255,90,31,.5)}
+.schools p{color:var(--muted);font-size:1.05rem;margin-bottom:16px;max-width:600px}
+.schools p strong{color:var(--text);font-weight:600}
+.schools ul{list-style:none;display:grid;gap:10px;margin-bottom:28px}
+.schools li{padding:14px 18px;background:rgba(5,7,11,.55);border-left:3px solid var(--frost)}
+.schools li b{display:block;font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-size:.92rem}
+.schools li span{color:var(--muted);font-size:.9rem}
+@media(max-width:900px){.schools{padding:40px 24px;margin-top:64px}.schools-grid{grid-template-columns:1fr;gap:28px}}
 @media(max-width:600px){.svc-grid{grid-template-columns:1fr}}
 
 /* ---------- work ---------- */
@@ -337,6 +349,25 @@ footer{border-top:1px solid var(--line);padding:46px 0;background:var(--void)}
       <div class="svc reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c3 3.2 3 15.8 0 19M12 2.5c-3 3.2-3 15.8 0 19"/></svg></div><h3>Websites</h3><p>Fast, bold, custom-coded sites that make your brand impossible to ignore.</p></div>
       <div class="svc reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 18.5h3"/></svg></div><h3>Mobile Apps</h3><p>iOS and Android apps taken from concept to the app stores, including AI-powered features.</p></div>
       <div class="svc reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2.5 20 6v6c0 4.7-3.3 8.4-8 9.5-4.7-1.1-8-4.8-8-9.5V6z"/><path d="m8.5 12 2.4 2.4 4.6-4.8"/></svg></div><h3>Business Tech Solutions</h3><p>Systems, integrations, and automation that keep your operation running smarter.</p></div>
+    </div>
+
+    <div class="schools reveal" id="schools">
+      <div class="kicker">School &amp; District Websites</div>
+      <div class="schools-grid">
+        <div>
+          <h3>Schools are getting <em>overcharged.</em><br>We're ending that.</h3>
+          <p>The cost of building and running software keeps falling — but what schools and districts get charged for their websites keeps going up. That money should be going to students, not inflated vendor contracts.</p>
+          <p><strong>Creaso-Norse builds school and district websites at a flat rate</strong>, with no surprise add-ons and no lock-in. If you ever want to run your site yourself, you can take it over — free.</p>
+        </div>
+        <div>
+          <ul>
+            <li><b>One flat rate</b><span>The district site, every school, and the department and program sites — covered together.</span></li>
+            <li><b>No lock-in</b><span>Your site is yours. Take it over yourself any time, at no charge.</span></li>
+            <li><b>Built for families and staff</b><span>Fast, mobile-first, accessible sites that are easy to keep up to date.</span></li>
+          </ul>
+          <a class="btn btn-hot" href="mailto:kirkcreason@creaso-norsetech.com?subject=School%20Website%20Inquiry">Talk to Us About Your School</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
